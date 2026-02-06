@@ -178,6 +178,15 @@ h2 {
   line-height: 1.6;
 }
 
+.route-info,
+.parking-info {
+  max-width: 700px;
+  margin: 0 auto 24px;
+  font-size: 0.98rem;
+  color: var(--muted);
+  text-align: center;
+}
+
 .event-divider {
   height: 1px;
   width: 60%;
@@ -200,7 +209,7 @@ h2 {
 /* MAP */
 
 .map-wrapper {
-  border-radius: 0;
+  position: relative;
   height: 420px;
 }
 
