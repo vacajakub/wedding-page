@@ -1,0 +1,1 @@
+This is a simple static website for a wedding.
