@@ -11,6 +11,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
   margin: 0;
@@ -34,6 +38,7 @@ body::before {
 /* HERO */
 header {
   min-height: 90vh;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -46,6 +51,10 @@ header {
   color: #fff;
 }
 
+.hero-content {
+  z-index: 1;
+  margin-top: 100px;
+}
 
 header h1 {
   font-size: clamp(3rem, 6vw, 4.5rem);
@@ -61,9 +70,68 @@ header .date {
   opacity: 0.9;
 }
 
+/* HERO NAVIGATION */
+.hero-nav {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 14px 22px;
+  padding: 0 20px;
+}
+
+.hero-nav a {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 4px;
+  white-space: nowrap;
+}
+
+.hero-nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 1px;
+  background: rgba(255,255,255,0.6);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.25s ease;
+}
+
+.hero-nav a:hover::after {
+  transform: scaleX(1);
+}
+
+@media (max-width: 600px) {
+  .hero-nav {
+    bottom: 24px;
+    margin-top: 48px;
+    gap: 10px 16px;
+  }
+
+  .hero-nav a {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .hero-nav {
+    display: none;
+  }
+}
+
 /* SECTIONS */
 section {
-  padding: 120px 20px;
+  padding: 80px 20px;
 }
 
 .container {
@@ -221,8 +289,8 @@ footer {
 .timeline-item {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 12px;
-  padding: 32px 0;
+  gap: 8px;
+  padding: 26px 0;
   border-bottom: 1px solid var(--border);
   text-align: center; 
 }
