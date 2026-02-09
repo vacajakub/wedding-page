@@ -123,7 +123,7 @@ header .date {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .hero-nav {
     display: none;
   }
@@ -269,6 +269,15 @@ h2 {
   opacity: 0.6;
 }
 
+.divider-timeline {
+  width: 80px;
+  height: 1px;
+  background: var(--accent);
+  margin: 20px auto 48px;
+  margin-bottom: 10px;
+  opacity: 0.6;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
@@ -290,7 +299,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr;
   gap: 8px;
-  padding: 26px 0;
+  padding: 13px 0;
   border-bottom: 1px solid var(--border);
   text-align: center; 
 }
