@@ -452,3 +452,7 @@ footer {
 .lightbox-close:hover {
   opacity: 1;
 }
+
+#other h5 {
+  text-align: center;
+}
