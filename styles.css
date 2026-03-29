@@ -461,3 +461,31 @@ footer {
   text-align: center;
 }
 
+
+/* COUNTDOWN */
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 0px;
+  flex-wrap: wrap;
+}
+
+.countdown div {
+  text-align: center;
+}
+
+.countdown span {
+  display: block;
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: var(--accent);
+}
+
+.countdown small {
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--muted);
+}
